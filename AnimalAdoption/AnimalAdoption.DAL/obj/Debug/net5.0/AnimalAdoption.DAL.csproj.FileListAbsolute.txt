@@ -1,0 +1,12 @@
+C:\Users\Fawzi\Documents\GitHub\AnimalAdoption\AnimalAdoption\AnimalAdoption.DAL\bin\Debug\net5.0\AnimalAdoption.DAL.deps.json
+C:\Users\Fawzi\Documents\GitHub\AnimalAdoption\AnimalAdoption\AnimalAdoption.DAL\bin\Debug\net5.0\AnimalAdoption.DAL.dll
+C:\Users\Fawzi\Documents\GitHub\AnimalAdoption\AnimalAdoption\AnimalAdoption.DAL\bin\Debug\net5.0\ref\AnimalAdoption.DAL.dll
+C:\Users\Fawzi\Documents\GitHub\AnimalAdoption\AnimalAdoption\AnimalAdoption.DAL\bin\Debug\net5.0\AnimalAdoption.DAL.pdb
+C:\Users\Fawzi\Documents\GitHub\AnimalAdoption\AnimalAdoption\AnimalAdoption.DAL\obj\Debug\net5.0\AnimalAdoption.DAL.csprojAssemblyReference.cache
+C:\Users\Fawzi\Documents\GitHub\AnimalAdoption\AnimalAdoption\AnimalAdoption.DAL\obj\Debug\net5.0\AnimalAdoption.DAL.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Fawzi\Documents\GitHub\AnimalAdoption\AnimalAdoption\AnimalAdoption.DAL\obj\Debug\net5.0\AnimalAdoption.DAL.AssemblyInfoInputs.cache
+C:\Users\Fawzi\Documents\GitHub\AnimalAdoption\AnimalAdoption\AnimalAdoption.DAL\obj\Debug\net5.0\AnimalAdoption.DAL.AssemblyInfo.cs
+C:\Users\Fawzi\Documents\GitHub\AnimalAdoption\AnimalAdoption\AnimalAdoption.DAL\obj\Debug\net5.0\AnimalAdoption.DAL.csproj.CoreCompileInputs.cache
+C:\Users\Fawzi\Documents\GitHub\AnimalAdoption\AnimalAdoption\AnimalAdoption.DAL\obj\Debug\net5.0\AnimalAdoption.DAL.dll
+C:\Users\Fawzi\Documents\GitHub\AnimalAdoption\AnimalAdoption\AnimalAdoption.DAL\obj\Debug\net5.0\ref\AnimalAdoption.DAL.dll
+C:\Users\Fawzi\Documents\GitHub\AnimalAdoption\AnimalAdoption\AnimalAdoption.DAL\obj\Debug\net5.0\AnimalAdoption.DAL.pdb
