@@ -16,6 +16,7 @@ namespace LearningIdentity.Models
         [StringLength(200,ErrorMessage ="Please do not exceed 200 characters!")]
         public string firstName { get; set; }
         public string lastName { get; set; }
+        public string FullName { get; set; } 
         public string DateOfBirth { get; set; }
         public string typeOfWork { get; set; }
         public string ImageUrl { get; set; }
@@ -38,7 +39,9 @@ namespace LearningIdentity.Models
 
         public string PersonalDescription { get; set; }
 
+        public string Latitude  { get; set; }
 
+        public string Longtitude { get; set; }
 
 
     }

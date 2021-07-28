@@ -10,3 +10,15 @@ C:\Users\Fawzi\Documents\GitHub\AnimalAdoption\AnimalAdoption\AnimalAdoption.DAL
 C:\Users\Fawzi\Documents\GitHub\AnimalAdoption\AnimalAdoption\AnimalAdoption.DAL\obj\Debug\net5.0\AnimalAdoption.DAL.dll
 C:\Users\Fawzi\Documents\GitHub\AnimalAdoption\AnimalAdoption\AnimalAdoption.DAL\obj\Debug\net5.0\ref\AnimalAdoption.DAL.dll
 C:\Users\Fawzi\Documents\GitHub\AnimalAdoption\AnimalAdoption\AnimalAdoption.DAL\obj\Debug\net5.0\AnimalAdoption.DAL.pdb
+C:\Users\User\Documents\GitHub\AnimalAdoption\AnimalAdoption\AnimalAdoption.DAL\bin\Debug\net5.0\AnimalAdoption.DAL.deps.json
+C:\Users\User\Documents\GitHub\AnimalAdoption\AnimalAdoption\AnimalAdoption.DAL\bin\Debug\net5.0\AnimalAdoption.DAL.dll
+C:\Users\User\Documents\GitHub\AnimalAdoption\AnimalAdoption\AnimalAdoption.DAL\bin\Debug\net5.0\ref\AnimalAdoption.DAL.dll
+C:\Users\User\Documents\GitHub\AnimalAdoption\AnimalAdoption\AnimalAdoption.DAL\bin\Debug\net5.0\AnimalAdoption.DAL.pdb
+C:\Users\User\Documents\GitHub\AnimalAdoption\AnimalAdoption\AnimalAdoption.DAL\obj\Debug\net5.0\AnimalAdoption.DAL.csproj.AssemblyReference.cache
+C:\Users\User\Documents\GitHub\AnimalAdoption\AnimalAdoption\AnimalAdoption.DAL\obj\Debug\net5.0\AnimalAdoption.DAL.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\User\Documents\GitHub\AnimalAdoption\AnimalAdoption\AnimalAdoption.DAL\obj\Debug\net5.0\AnimalAdoption.DAL.AssemblyInfoInputs.cache
+C:\Users\User\Documents\GitHub\AnimalAdoption\AnimalAdoption\AnimalAdoption.DAL\obj\Debug\net5.0\AnimalAdoption.DAL.AssemblyInfo.cs
+C:\Users\User\Documents\GitHub\AnimalAdoption\AnimalAdoption\AnimalAdoption.DAL\obj\Debug\net5.0\AnimalAdoption.DAL.csproj.CoreCompileInputs.cache
+C:\Users\User\Documents\GitHub\AnimalAdoption\AnimalAdoption\AnimalAdoption.DAL\obj\Debug\net5.0\AnimalAdoption.DAL.dll
+C:\Users\User\Documents\GitHub\AnimalAdoption\AnimalAdoption\AnimalAdoption.DAL\obj\Debug\net5.0\ref\AnimalAdoption.DAL.dll
+C:\Users\User\Documents\GitHub\AnimalAdoption\AnimalAdoption\AnimalAdoption.DAL\obj\Debug\net5.0\AnimalAdoption.DAL.pdb

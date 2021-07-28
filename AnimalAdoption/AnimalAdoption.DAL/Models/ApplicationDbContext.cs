@@ -16,5 +16,30 @@ namespace AnimalAdoption.DAL.Models
 
         }
         public virtual DbSet<ApplicationUser> ApplicationUsers { get; set; }
+
+        public virtual DbSet<Animal> Animals { get; set; }
+
+        public virtual DbSet<AnimalPhoto> AnimalPhotos { get; set; }
+
+        public virtual DbSet<Breed> Breeds { get; set; }
+
+        public virtual DbSet<Dog> Dogs { get; set; }
+
+        public virtual DbSet<FriendlyLevel> FriendlyLevels { get; set; }
+
+        public virtual DbSet<VaccinationLevel> VaccinationLevels { get; set; }
+
+        public virtual DbSet<Weight> Weights { get; set; }
+
+        public virtual DbSet<EnergyLevel> EnergyLevels { get; set; }
+
+        public virtual DbSet<TrainingLevel> TrainingLevels { get; set; }
+
+        public virtual DbSet<Country> Countries { get; set; }
+
+        public virtual DbSet<LivingState> LivingStates { get; set; }
+
+
+
     }
 }

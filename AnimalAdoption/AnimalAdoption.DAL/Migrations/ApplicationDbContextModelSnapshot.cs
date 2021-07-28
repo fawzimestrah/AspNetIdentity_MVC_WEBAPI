@@ -19,6 +19,238 @@ namespace AnimalAdoption.DAL.Migrations
                 .HasAnnotation("ProductVersion", "5.0.8")
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
+            modelBuilder.Entity("AnimalAdoption.DAL.Models.Animal", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("AnimalDescription")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("BreedId")
+                        .HasColumnType("int");
+
+                    b.Property<DateTime>("DateOfBirth")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("Discriminator")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("EnergyLevelId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("FriendlyLevelId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Gender")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<bool>("IsVaccinated")
+                        .HasColumnType("bit");
+
+                    b.Property<int?>("LivingStateId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Name")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("UserId")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<string>("VaccinationDescription")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("VaccinationLevelId")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("BreedId");
+
+                    b.HasIndex("EnergyLevelId");
+
+                    b.HasIndex("FriendlyLevelId");
+
+                    b.HasIndex("LivingStateId");
+
+                    b.HasIndex("UserId");
+
+                    b.HasIndex("VaccinationLevelId");
+
+                    b.ToTable("Animals");
+
+                    b.HasDiscriminator<string>("Discriminator").HasValue("Animal");
+                });
+
+            modelBuilder.Entity("AnimalAdoption.DAL.Models.AnimalPhoto", b =>
+                {
+                    b.Property<string>("Id")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<int>("AnimalId")
+                        .HasColumnType("int");
+
+                    b.Property<DateTime>("InsertedDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<bool>("Main")
+                        .HasColumnType("bit");
+
+                    b.Property<string>("PhotoURL")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("PublicName")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("AnimalId");
+
+                    b.ToTable("AnimalPhotos");
+                });
+
+            modelBuilder.Entity("AnimalAdoption.DAL.Models.Breed", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("BreedType")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Description")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int?>("ParentId")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Breeds");
+                });
+
+            modelBuilder.Entity("AnimalAdoption.DAL.Models.Country", b =>
+                {
+                    b.Property<string>("Name")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<string>("Code")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Name");
+
+                    b.ToTable("Countries");
+                });
+
+            modelBuilder.Entity("AnimalAdoption.DAL.Models.EnergyLevel", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("Description")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("LevelDescription")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("EnergyLevels");
+                });
+
+            modelBuilder.Entity("AnimalAdoption.DAL.Models.FriendlyLevel", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("Level")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("LevelDescription")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("FriendlyLevels");
+                });
+
+            modelBuilder.Entity("AnimalAdoption.DAL.Models.LivingState", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("Description")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("LivingStateDescription")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("LivingStates");
+                });
+
+            modelBuilder.Entity("AnimalAdoption.DAL.Models.TrainingLevel", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("Description")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Level")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("TrainingLevels");
+                });
+
+            modelBuilder.Entity("AnimalAdoption.DAL.Models.VaccinationLevel", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("Level")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("LevelDescription")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("VaccinationLevels");
+                });
+
+            modelBuilder.Entity("AnimalAdoption.DAL.Models.Weight", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("WeightDescription")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Weights");
+                });
+
             modelBuilder.Entity("AnimalAdoption.MVC.Models.ResidencyType", b =>
                 {
                     b.Property<int>("Id")
@@ -257,6 +489,26 @@ namespace AnimalAdoption.DAL.Migrations
                     b.ToTable("AspNetUserTokens");
                 });
 
+            modelBuilder.Entity("AnimalAdoption.DAL.Models.Dog", b =>
+                {
+                    b.HasBaseType("AnimalAdoption.DAL.Models.Animal");
+
+                    b.Property<string>("TrainingDescription")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("TrainingLevelId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("WeightId")
+                        .HasColumnType("int");
+
+                    b.HasIndex("TrainingLevelId");
+
+                    b.HasIndex("WeightId");
+
+                    b.HasDiscriminator().HasValue("Dog");
+                });
+
             modelBuilder.Entity("LearningIdentity.Models.ApplicationUser", b =>
                 {
                     b.HasBaseType("Microsoft.AspNetCore.Identity.IdentityUser");
@@ -264,10 +516,19 @@ namespace AnimalAdoption.DAL.Migrations
                     b.Property<string>("DateOfBirth")
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<string>("FullName")
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<int>("HoursAwayFromHome")
                         .HasColumnType("int");
 
                     b.Property<string>("ImageUrl")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Latitude")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Longtitude")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("PersonalDescription")
@@ -301,6 +562,64 @@ namespace AnimalAdoption.DAL.Migrations
                     b.HasIndex("SocialStateId");
 
                     b.HasDiscriminator().HasValue("ApplicationUser");
+                });
+
+            modelBuilder.Entity("AnimalAdoption.DAL.Models.Animal", b =>
+                {
+                    b.HasOne("AnimalAdoption.DAL.Models.Breed", "Breed")
+                        .WithMany("Animals")
+                        .HasForeignKey("BreedId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("AnimalAdoption.DAL.Models.EnergyLevel", "EnergyLevel")
+                        .WithMany()
+                        .HasForeignKey("EnergyLevelId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("AnimalAdoption.DAL.Models.FriendlyLevel", "FriendlyLevel")
+                        .WithMany()
+                        .HasForeignKey("FriendlyLevelId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("AnimalAdoption.DAL.Models.LivingState", "LivingState")
+                        .WithMany()
+                        .HasForeignKey("LivingStateId");
+
+                    b.HasOne("LearningIdentity.Models.ApplicationUser", "User")
+                        .WithMany()
+                        .HasForeignKey("UserId");
+
+                    b.HasOne("AnimalAdoption.DAL.Models.VaccinationLevel", "VaccinationLevel")
+                        .WithMany()
+                        .HasForeignKey("VaccinationLevelId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Breed");
+
+                    b.Navigation("EnergyLevel");
+
+                    b.Navigation("FriendlyLevel");
+
+                    b.Navigation("LivingState");
+
+                    b.Navigation("User");
+
+                    b.Navigation("VaccinationLevel");
+                });
+
+            modelBuilder.Entity("AnimalAdoption.DAL.Models.AnimalPhoto", b =>
+                {
+                    b.HasOne("AnimalAdoption.DAL.Models.Animal", "Animal")
+                        .WithMany("AnimalPhotos")
+                        .HasForeignKey("AnimalId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Animal");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>
@@ -354,6 +673,25 @@ namespace AnimalAdoption.DAL.Migrations
                         .IsRequired();
                 });
 
+            modelBuilder.Entity("AnimalAdoption.DAL.Models.Dog", b =>
+                {
+                    b.HasOne("AnimalAdoption.DAL.Models.TrainingLevel", "TrainingLevel")
+                        .WithMany()
+                        .HasForeignKey("TrainingLevelId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("AnimalAdoption.DAL.Models.Weight", "Weight")
+                        .WithMany()
+                        .HasForeignKey("WeightId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("TrainingLevel");
+
+                    b.Navigation("Weight");
+                });
+
             modelBuilder.Entity("LearningIdentity.Models.ApplicationUser", b =>
                 {
                     b.HasOne("AnimalAdoption.MVC.Models.ResidencyType", "ResidencyType")
@@ -371,6 +709,16 @@ namespace AnimalAdoption.DAL.Migrations
                     b.Navigation("ResidencyType");
 
                     b.Navigation("SocialState");
+                });
+
+            modelBuilder.Entity("AnimalAdoption.DAL.Models.Animal", b =>
+                {
+                    b.Navigation("AnimalPhotos");
+                });
+
+            modelBuilder.Entity("AnimalAdoption.DAL.Models.Breed", b =>
+                {
+                    b.Navigation("Animals");
                 });
 
             modelBuilder.Entity("AnimalAdoption.MVC.Models.ResidencyType", b =>
