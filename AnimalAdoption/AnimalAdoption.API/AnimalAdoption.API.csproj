@@ -18,4 +18,9 @@
     <ProjectReference Include="..\AnimalAdoption.MVC\AnimalAdoption.MVC.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="wwwroot\Images\Accounts\" />
+    <Folder Include="wwwroot\Images\Passports\" />
+  </ItemGroup>
+
 </Project>

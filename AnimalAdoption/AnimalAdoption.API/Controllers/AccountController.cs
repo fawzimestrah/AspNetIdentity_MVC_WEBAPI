@@ -62,9 +62,7 @@ namespace IdentityAPI.Controllers
                     firstName = model.firstName,
                     UserName = model.Email,
                     Email = model.Email, 
-                    lastName = model.lastName,
-                    ResidencyTypeId =model.ResidencyTypeId,
-                    SocialStateId=model.SocialStateId
+                    lastName = model.lastName
             };
             var created_user = await _userManager.CreateAsync(user, model.Password);
             if (!created_user.Succeeded)

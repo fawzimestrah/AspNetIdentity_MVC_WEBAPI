@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace AnimalAdoption.MVC.Models
 {
-    public class ResidencyType
+    public class HumanResidencyType
     {
         public int Id { get; set; }
 

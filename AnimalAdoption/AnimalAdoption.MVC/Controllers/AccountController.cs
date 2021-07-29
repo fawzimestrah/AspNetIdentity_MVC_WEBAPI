@@ -42,7 +42,7 @@ namespace LearningIdentity.Controllers
                                             firstName = model.firstName,
                                             lastName = model.lastName,
                                            // ResidencyTypeId=model.ResidencyTypeId
-                                             ResidencyTypeId=1
+                                             HumanResidencyTypeId =1
                                                 };
 
 

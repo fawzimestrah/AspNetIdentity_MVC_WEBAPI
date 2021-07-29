@@ -1,6 +1,6 @@
 ﻿namespace AnimalAdoption.DAL.Models
 {
-    public class LivingState
+    public class AnimalResidencyType
     {
         public int Id { get; set; }
         public string LivingStateDescription { get; set; }

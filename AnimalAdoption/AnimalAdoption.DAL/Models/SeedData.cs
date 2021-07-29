@@ -91,7 +91,7 @@ namespace AnimalAdoption.DAL.Models
             bool dataExists = context.LivingStates.Any();
             if (!dataExists)
             {
-                await context.LivingStates.AddRangeAsync(new LivingState { LivingStateDescription = "Indoor" }, new LivingState { LivingStateDescription = "Outdoor" }, new LivingState { LivingStateDescription = "Indoor-Outdoor" });
+                await context.LivingStates.AddRangeAsync(new AnimalResidencyType { LivingStateDescription = "Indoor" }, new AnimalResidencyType { LivingStateDescription = "Outdoor" }, new AnimalResidencyType { LivingStateDescription = "Indoor-Outdoor" });
                 await context.SaveChangesAsync();
             }
         }

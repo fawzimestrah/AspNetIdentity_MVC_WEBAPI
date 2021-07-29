@@ -48,7 +48,7 @@ namespace AnimalAdoption.DAL.Models
         public string AnimalDescription { get; set; }
 
         //outdoor , indoor, 
-        public LivingState LivingState { get; set; }
+        public AnimalResidencyType LivingState { get; set; }
 
         public virtual ICollection<AnimalPhoto> AnimalPhotos { get; set; } 
 

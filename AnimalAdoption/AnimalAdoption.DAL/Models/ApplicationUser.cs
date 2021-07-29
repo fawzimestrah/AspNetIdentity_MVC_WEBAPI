@@ -1,4 +1,5 @@
-﻿using AnimalAdoption.MVC.Models;
+﻿using AnimalAdoption.DAL.Models;
+using AnimalAdoption.MVC.Models;
 using Microsoft.AspNetCore.Identity;
 using System;
 using System.Collections.Generic;
@@ -17,24 +18,20 @@ namespace LearningIdentity.Models
         public string firstName { get; set; }
         public string lastName { get; set; }
         public string FullName { get; set; } 
-        public string DateOfBirth { get; set; }
+        public DateTime DateOfBirth { get; set; }
         public string typeOfWork { get; set; }
         public string ImageUrl { get; set; }
         public bool firstTimeToAdopt { get; set; }
         public bool livingAlone { get; set; }
 
-        [ForeignKey(nameof(ResidencyType))]
-        public int ResidencyTypeId { get; set; }
-
-        //home or home with garden or appartment 
-        public ResidencyType ResidencyType { get; set; }
+        [ForeignKey(nameof(HumanResidencyType))]
+        public int HumanResidencyTypeId { get; set; }
 
         [ForeignKey(nameof(SocialState))]
         public int SocialStateId { get; set; }
 
-        //alone , with adults....
-        public SocialState SocialState { get; set; }
-
+        [ForeignKey(nameof(AnimalResidencyType))]
+        public int AnimalResidencyTypeId { get; set; }
         public int HoursAwayFromHome { get; set; }
 
         public string PersonalDescription { get; set; }
@@ -43,6 +40,8 @@ namespace LearningIdentity.Models
 
         public string Longtitude { get; set; }
 
-
+        public AnimalResidencyType AnimalResidencyType { get; set; }
+        public HumanResidencyType HumanResidencyType { get; set; }
+        public SocialState SocialState { get; set; }
     }
 }

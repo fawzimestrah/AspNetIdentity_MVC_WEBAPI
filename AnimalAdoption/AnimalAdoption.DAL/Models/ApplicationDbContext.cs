@@ -37,9 +37,9 @@ namespace AnimalAdoption.DAL.Models
 
         public virtual DbSet<Country> Countries { get; set; }
 
-        public virtual DbSet<LivingState> LivingStates { get; set; }
+        public virtual DbSet<AnimalResidencyType> LivingStates { get; set; }
 
-
+        public virtual DbSet<VerificationRequest> VerificationRequests { get; set; }
 
     }
 }
