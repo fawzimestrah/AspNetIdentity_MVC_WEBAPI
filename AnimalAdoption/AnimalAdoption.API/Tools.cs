@@ -19,7 +19,7 @@ namespace AnimalAdoption.API
             return path;
         }
 
-        public static async Task<List<string>> SaveImages(List<IFormFile> formFiles, string folderName)
+        public static async Task<List<string>> SaveImages(this IFormFileCollection formFiles, string folderName)
         {
             List<string> result = new List<string>();
             foreach (IFormFile form in formFiles)
