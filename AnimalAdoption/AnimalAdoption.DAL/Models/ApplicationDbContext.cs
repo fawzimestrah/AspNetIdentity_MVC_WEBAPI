@@ -23,7 +23,7 @@ namespace AnimalAdoption.DAL.Models
 
         public virtual DbSet<Breed> Breeds { get; set; }
 
-        public virtual DbSet<Dog> Dogs { get; set; }
+        
 
         public virtual DbSet<FriendlyLevel> FriendlyLevels { get; set; }
 
@@ -40,6 +40,7 @@ namespace AnimalAdoption.DAL.Models
         public virtual DbSet<AnimalResidencyType> LivingStates { get; set; }
 
         public virtual DbSet<VerificationRequest> VerificationRequests { get; set; }
+        public virtual DbSet<AnimalType> AnimalTypes { get; set; }
 
     }
 }

@@ -95,7 +95,15 @@ namespace AnimalAdoption.DAL.Models
                 await context.SaveChangesAsync();
             }
         }
-
+        private static async Task AddAnimalType(ApplicationDbContext context)
+        {
+            bool dataExists = context.AnimalTypes.Any();
+            if (!dataExists)
+            {
+                await context.AnimalTypes.AddRangeAsync(new AnimalType() { AnimalTypeName = "DOG" });
+                await context.SaveChangesAsync();
+            }
+        }
         public static async Task SeedAll(ApplicationDbContext context)
         {
             await AddBreed(context);
@@ -106,6 +114,7 @@ namespace AnimalAdoption.DAL.Models
             await AddWeights(context);
             await AddCountries(context);
             await AddLivingState(context);
+            await AddAnimalType(context);
         }
 
 
